@@ -1,0 +1,622 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: yellow;
+}
+
+body{
+    background: yellow;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: black;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: aLL .55s ease;
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid rgb(102, 32, 0);
+}
+
+#menu-icon{
+    color: black;
+    font-size: 25px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.produk{
+    height: 100%;
+    width: 100%;
+    min-height: 95vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0 19%;
+}
+
+.produk img{
+    filter: brightness(0.8);
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 10%;
+}
+
+.produk-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(102, 32, 0);
+    margin-bottom: 40px;
+}
+
+.produk-text h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 76px;
+    line-height: 1;
+    color: black;
+    margin: 0 0 45px;
+}
+
+.produk-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.produk-text p{
+    font-size: 15px;
+    line-height: 1.9;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.produk-img {
+    height: auto;
+}
+
+.produk-text a{
+    display: inline-block;
+    color: white;
+    background: rgb(102, 32, 0);
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.produk-text a:hover{
+    background: white;
+    border: 1px solid rgb(0, 0, 0);
+    transform: translateX(8px);
+    color: black;
+}
+
+.galeri-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Adjust the height as needed */
+  }
+
+.galeri-text h1{
+    align-items: center;
+}
+
+.scroll-top{
+    position: fixed;
+    transition: opacity 0.3s;
+    bottom: 6%;
+    right: 10%;
+    z-index: 9999;
+}
+
+.scroll-top.active{
+    opacity: 1;
+}
+
+.scroll-top i {
+    display: block;
+    padding: 14px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(102, 32, 0);
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+
+.scroll-top i:hover{
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+.galeri{
+    position: relative;
+}
+
+.galeri h1{
+    font-family: 'Rubik', sans-serif;
+}
+.galeri-slide {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    flex-shrink: 0;
+}
+  
+.slide.active {
+    opacity: 1;
+}
+.slide-buttonsp {
+    position: absolute;
+    top: 50%;
+    left: 9%;
+}
+
+.slide-buttonsn {
+    position: absolute;
+    top: 50%;
+    right: 9%;
+}
+
+.prev-button,
+.next-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    outline: none;
+    transition: all .50s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    color: rgb(102, 32, 0);
+}
+
+.prev-button {
+    left: -10px;
+}
+
+.next-button {
+    right: 30px;
+}
+.slide-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+  
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+  
+.dot.active {
+    background-color: #000000;
+}
+
+footer {
+    position: relative;
+    background-color: black;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-media {
+    display:contents;
+    gap: 50px;
+  }
+  
+  .social-icon {
+    color: yellow;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 5%;
+  }
+  
+  .subscribe {
+    background-color: black;
+    padding: 20px;
+  }
+  
+  .subscribe label {
+    color: yellow;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe input[type="submit"] {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe input[type="submit"]:hover {
+    background-color: #ffd700; /* Lighter shade of yellow */
+  }
+
+.youtube{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.youtube h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.youtube p{
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 32px;
+}
+
+.youtube a{
+    align-items: right;
+    display: inline-block;
+    color: white;
+    background:black;
+    border: 1px solid transparent;
+    padding: 9px 18px;
+    line-height: 1.4;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: all .55s ease;
+}
+
+.youtube a:hover{
+    background: #fff;
+    color: black;
+}
+
+.youtube iframe {
+    width: 100%;
+    height: 340px;
+}
+
+footer .copyright {
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #999;
+  font-size: 12px;
+}
+
+.tabel-footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .produk{
+    height: 100%;
+    width: 100%;
+    min-height: 95vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0 19%;
+}
+
+
+.produk-text1 h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(102, 32, 0);
+    margin-bottom: 40px;
+}
+
+.produk-text1 h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 76px;
+    line-height: 1;
+    color: black;
+    margin: 0 0 45px;
+}
+
+.produk-text1 h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.produk-text1 p{
+    font-size: 15px;
+    line-height: 1.9;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.visimisi{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:flex-start;
+    gap: 2rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.visi {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.visi h1{
+    font-size: 50px;
+    justify-content: center;
+    margin-top: 0%;
+}
+
+.visi p{
+    margin-top: 75px;
+}
+
+.misi h1{
+    font-size: 50px;
+    margin-top: 0%;
+}
+
+
+@media (max-width: 1535px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-top{
+        right: 3%;
+        transition: .2s;
+    }
+}
+@media (max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 990px){
+    .youtube{
+        top: 9%;
+        display: block;
+    }
+    .youtube-text h1{
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 875){
+    .about .produk-img img{
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 875px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .produk-img img{
+        margin-top: 140px;
+        align-items: center;
+        width: 85%;
+        height: auto;
+        margin-left: 9%;
+        margin-bottom: 10%;
+    }
+
+    .produk-text{
+        height: auto;
+        margin-top: 20%;
+    }
+
+    .produk-text h1{
+        font-size: 56px;
+        margin: 0 0 25px;
+        text-align: center;
+    }
+    .produk-text h5{
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .produk-text h4{
+        text-align: center;
+    }
+
+    .produk-text p{
+        text-align: center;
+    }
+
+    .produk-text a{
+        display: flex;
+        justify-content: center;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .produk-text1{
+        height: auto;
+    }
+
+    .produk-text1 h1{
+        font-size: 56px;
+        margin: 0 0 25px;
+        text-align: center;
+    }
+    .produk-text1 h5{
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .produk-text1 h4{
+        text-align: center;
+    }
+
+    .produk-text1 p{
+        text-align: center;
+    }
+
+    .produk-text1 a{
+        display: flex;
+        justify-content: center;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .produk{
+        min-height: 100vh;
+        top: 9%;
+        height: auto;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .visimisi{
+        height: auto;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .visi p {
+        margin-top: 0;
+    }
+
+    .arrow-down{
+        right: 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 575px){
+    #menu-icon{
+        display: block;
+    }
+    .produk-text{
+        height: auto;
+    }
+
+    .produk-img img{
+        margin-top: 1%;
+    }
+    .scroll-top{
+        display: none;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: 23vh;
+        background: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 20px;
+        transition: all .55s ease
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 8px 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
